@@ -9,5 +9,3 @@ for key, value in user_0.items():
     print('\nkey:'+ key)
     print('value:'+ value)
 print(key.title())    
-print(key) 
-print(user_0[key])
