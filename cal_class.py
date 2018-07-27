@@ -11,7 +11,14 @@ class Cal():
     def mul(self, input_value):
         self.value *=input_value
     def div(self, input_value):
-        self.value /=input_value
+        try:
+            self.value /=input_value
+        except ZeroDivisionError:
+            print('0 으로 나눌수 없어요.')
+        # else:
+        finally:
+            print('나누기 실행 완료.')    
+        
 
 # 클래스 상속(Cal 클래스의 각종 메소드를 상속 받음)
 class SafeCal(Cal):
@@ -31,7 +38,7 @@ cal1.add(1)
 cal1.result()
 cal1.sub(2)
 cal1.result()
+cal1.div(2)
+cal1.result()
 cal1.mul(3)
 cal1.result()
-cal2.div(0)
-cal2.result()
